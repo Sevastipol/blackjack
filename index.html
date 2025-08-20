@@ -95,6 +95,17 @@
             document.getElementById("count").textContent = count;
             document.getElementById("dcount").textContent = count;
         }
+        function push() {
+             document.getElementById("stand").style.display = 'none' 
+           document.getElementById("hit").style.display = 'none'
+            alert("PUSH, dealer drew a " + x);
+            document.getElementById("start").style.display = 'block' 
+            money += wager;
+            count = 0;
+            dcount = 0;
+            document.getElementById("count").textContent = count;
+            document.getElementById("dcount").textContent = count;
+        }
         function Standd() {
            document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none' 
@@ -117,11 +128,13 @@
                 disaac()
              } else if (dcount < count && dcount >= 16){
                 dwin()
+            } else if (dcount === count) {
+
             } else {
                 setTimeout(() => {
                 Standd()
                 }, 1000);
-            } 
+            }
 
 
         }
