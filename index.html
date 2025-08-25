@@ -24,7 +24,7 @@
         let x = 0;
         function Start() {
             wager = prompt("Wager?") 
-            if (wager <= money) {
+            if ((wager <= money) && (wager > 0)) {
                 money = money - wager
                 document.getElementById("money").textContent = money
                 document.getElementById("stand").style.display = 'block' 
