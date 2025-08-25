@@ -15,6 +15,38 @@
             <p>Money: <p id="money">50</p>
         </div>
     </body>
+    <style>
+        #hit {
+            padding: 5%;
+            width: 15%;
+            height: 10%;
+            font-size: 160%;
+            color: green;
+            font: Helvetica;
+        }
+        #stand {
+            padding: 5%;
+            text-size-adjust: 0%;
+            width: 15%;
+            height: 10%;
+            font-size: 160%;
+            color: red;
+            font: Helvetica;
+        }
+        #start {
+            border-color: green;
+            background-color: chartreuse;
+            color: rgb(0, 0, 0);
+            padding: 10%;
+            font-size: 160%;
+            font: Helvetica;
+        }
+        #money {
+            font-size: 160%;
+            color: darkgreen;
+            font: Helvetica;
+        }
+    </style>
     <script>
         let wager = 0;
         let dcount = 0
@@ -28,7 +60,7 @@
                 money = money - wager
                 document.getElementById("money").textContent = money
                 document.getElementById("stand").style.display = 'block' 
-                document.getElementById("start").style.display = 'block' 
+                document.getElementById("start").style.display = 'none'
            document.getElementById("hit").style.display = 'block'; console.log("fail");
             } else {
                 alert("invalid amount")
