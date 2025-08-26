@@ -60,6 +60,7 @@
         let dcount = 0
         let count = 0
         let money = 50
+        let dealerCardDrawTime = prompt("Enter how fast dealer draws cards in milliseconds")
         let v = Math.round(Math.random() * 8 + 1);
         let x = 0;
         function Start() {
@@ -120,6 +121,7 @@
             dcount = 0;
             document.getElementById("count").textContent = count;
             document.getElementById("dcount").textContent = count;
+             document.getElementById("input").disabled = false;
         }
         function isaac() {
             document.getElementById("stand").style.display = 'none' 
@@ -184,7 +186,7 @@
             } else {
                 setTimeout(() => {
                 Standd()
-                }, 1000);
+                }, dealerCardDrawTime);
             }
 
 
