@@ -4,11 +4,19 @@
         <title>Blackjack</title>
     </head>
     <body>
-        <button id="start" onclick="Start()">Start</button>
+
+         <audio id="myAudio">
+        <source src="example.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="myAudio2">
+        <source src="example.mp3" type="audio/mpeg">
+    </audio>
+
+        <button id="start" onclick="Start(), standSound()">Start</button>
         <input id="input"type="text" placeholder="Enter Wager">
         <div id="options">
-            <button style="display: none;" onclick="Hitt()" id="hit">Hit</button>
-            <button style="display: none;" onclick="Standd()" id="stand">Stand</button>
+            <button style="display: none;" onclick="Hitt(), hitSound()" id="hit">Hit</button>
+            <button style="display: none;" onclick="Standd(), standSound()" id="stand">Stand</button>
         </div>
         <div id="stats">
             <p id="count">0</p>
@@ -67,6 +75,7 @@
             document.getElementById("input").disabled = true;
             wager = document.getElementById("input").value;
             if ((wager <= money) && (wager > 0)) {
+                hitSound()
                 money = money - wager
                 document.getElementById("money").textContent = money
                 document.getElementById("stand").style.display = 'block' 
@@ -190,6 +199,12 @@
             }
 
 
+        }
+        function standSound() {
+            document.getElementById('myAudio2').play()
+        }
+        function hitSound() {
+            document.getElementById('myAudio').play()
         }
     </script>
 </html>
