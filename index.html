@@ -81,7 +81,7 @@
         }
         function Hitt() {
             let b = Math.round(Math.random() * 52);
-            if (b > 12) {
+            if (b > 16) {
                 v = Math.round(Math.random() * 8 + 1);
                 count += v;
             document.getElementById("count").textContent = count;
@@ -164,7 +164,7 @@
            document.getElementById("hit").style.display = 'none' 
            document.getElementById("start").style.display = 'none' 
            let ba = Math.round(Math.random() * 52);
-            if (ba > 12) {
+            if (ba > 16) {
                 x = Math.round(Math.random() * 8 + 1);
                 dcount += x;
             document.getElementById("dcount").textContent = dcount;
@@ -177,9 +177,9 @@
                 disaac();
             } else if (dcount >= 22) {
                 dwin()
-            } else if ((dcount > count) && (dcount >= 16)) {
+            } else if ((dcount > count) && (dcount >= 17)) {
                 disaac()
-             } else if (dcount < count && dcount >= 16){
+             } else if (dcount < count && dcount >= 17){
                 dwin()
             } else if (dcount === count) {
                 push()
