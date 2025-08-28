@@ -107,24 +107,24 @@
             
         }
         function win() {
-            alert("YOU WIN! drew a " + v);
             document.getElementById("start").style.display = 'block' 
             document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none'
             count = 0;
             dcount = 0;
             money += wager*2
+            alert("YOU WIN! drew a " + v);
             document.getElementById("money").textContent = money
             document.getElementById("count").textContent = count;
             document.getElementById("dcount").textContent = count;
             document.getElementById("input").disabled = false;
         }
          function dwin() {
-            alert("YOU WIN! dealer drew a " + x);
             document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none'
             document.getElementById("start").style.display = 'block' 
             money += wager*2
+             alert("YOU WIN! dealer drew a " + x);
             document.getElementById("money").textContent = money
             count = 0;
             dcount = 0;
@@ -135,11 +135,11 @@
         function isaac() {
             document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none'
-            alert("You lost, drew a " + v);
             document.getElementById("start").style.display = 'block' 
             document.getElementById("input").disabled = false;
             count = 0;
             dcount = 0;
+            alert("You lost, drew a " + v);
             document.getElementById("count").textContent = count;
             document.getElementById("dcount").textContent = count;
             document.getElementById("input").disabled = false;
@@ -147,10 +147,10 @@
         function disaac() {
             document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none'
-            alert("You lost, dealer drew a " + x);
             document.getElementById("start").style.display = 'block' 
             count = 0;
             dcount = 0;
+            alert("You lost, dealer drew a " + x);
             document.getElementById("count").textContent = count;
             document.getElementById("dcount").textContent = count;
             document.getElementById("input").disabled = false;
@@ -158,9 +158,9 @@
         function push() {
              document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none'
-            alert("PUSH, dealer drew a " + x);
             document.getElementById("start").style.display = 'block' 
             money += wager*1;
+            alert("PUSH, dealer drew a " + x);
             document.getElementById("money").textContent = money
             count = 0;
             dcount = 0;
