@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Blackjack</title>
+        <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/id/1420518918/vector/blackjack-icon-flat-style-vector-illustration-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=a3WpuAt-cEzO1rNAPasLfi6FgwTTepKNm10194yOEUg=">
     </head>
     <body>
 
@@ -23,6 +24,8 @@
             <p id="dcount">0</p>
             <p>Money: <span id="money">50</span>
         </div>
+        <container id="cards">
+        </container>
     </body>
     <style>
         #hit {
@@ -83,8 +86,12 @@
                 Hitt()
                 Hitt()
            document.getElementById("hit").style.display = 'block';
-            } else {
-                alert("invalid amount")
+            } else if (wager <= 0) {
+                alert("invalid amount, bet should be over 0")
+                document.getElementById("input").disabled = false;
+            }
+            else {
+                alert(`invalid amount, bet should be ${money} or under`)
                 document.getElementById("input").disabled = false;
             }
         }
@@ -131,7 +138,7 @@
             document.getElementById("count").textContent = count;
             document.getElementById("dcount").textContent = count;
              document.getElementById("input").disabled = false;
-        }
+         }
         function isaac() {
             document.getElementById("stand").style.display = 'none' 
            document.getElementById("hit").style.display = 'none'
@@ -197,8 +204,6 @@
                 Standd()
                 }, dealerCardDrawTime);
             }
-
-
         }
         function standSound() {
             document.getElementById('myAudio2').play()
